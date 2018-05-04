@@ -35,11 +35,25 @@ export default {
       color: $color-text-l;
     }
     &.router-link-active {
+      animation: fade 1s ease;
       .tab-link {
         color: $color-theme;
+        transition: border-bottom .5s;
         border-bottom: 2px solid $color-theme;
       }
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: $color-highlight-background;
+  }
+  100% {
+    background-color: transparent;
   }
 }
 </style>

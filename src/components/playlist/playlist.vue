@@ -229,7 +229,7 @@ export default {
           flex: 1;
           @include no-wrap();
           font-size: $font-size-medium;
-          color: $color-text-d;
+          // color: $color-text-d;
         }
         .like {
           @include extend-click();

@@ -198,7 +198,7 @@ export default {
           transform: `translate3d(${x}px, ${y}px, 0) scale(${scale})`
         },
         60: {
-          transform: `translate3d(0, 0, 0) scale(1.1)`
+          transform: `translate3d(0, 0, 0) scale(1.2)`
         },
         100: {
           transform: `translate3d(0, 0, 0) scale(1)`

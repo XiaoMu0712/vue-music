@@ -1,7 +1,7 @@
 <template>
   <div class="m-header">
     <div class="icon"></div>
-    <h1 class="text">Chicken Music</h1>
+    <h1 class="text">Vue Music</h1>
     <router-link to="/user" class="mine" tag="div">
       <i class="icon-mine"></i>
     </router-link>
@@ -31,7 +31,7 @@ export default {
     height: 32px;
     margin-right: 9px;
     @include bg-image ('logo');
-    background-size: 30px 32px;
+    background-size: 100% 100%;
   }
   .text {
     display: inline-block;

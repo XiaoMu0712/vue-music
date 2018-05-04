@@ -1,6 +1,7 @@
 import {getLyric} from 'api/lyric'
 import {ERR_OK} from 'api/config'
 import {Base64} from 'js-base64'
+// import {getVkey} from 'api/vkey'
 
 export default class Song {
   constructor({id, mid, singer, name, album, duration, image, url}) {
@@ -33,6 +34,8 @@ export default class Song {
 }
 
 export function createSong(musicData) {
+  // console.log('createSong')
+  // console.log(_getVkey(musicData.songmid))
   return new Song({
     id: musicData.songid,
     mid: musicData.songmid,
@@ -55,3 +58,13 @@ function filterSinger(singer) {
   })
   return ret.join('/')
 }
+
+// function _getVkey(songmid) {
+//   let vkey = ''
+//   getVkey(songmid).then((res) => {
+//     if (res.code === ERR_OK) {
+//       vkey = res.data.items[0].vkey
+//     }
+//   })
+//   return vkey
+// }

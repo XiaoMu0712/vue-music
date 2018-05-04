@@ -93,7 +93,7 @@ export default {
         }
       })
 
-      this.slider.on('scrollEnd', () => { // better-scroll开发的一个自定义事件
+      this.slider.on('scrollEnd', () => { // better-scroll派发的一个自定义事件
         // console.log(this.slider.getCurrentPage().pageX)
         let pageIndex = this.slider.getCurrentPage().pageX
         // if (this.loop) {
@@ -125,7 +125,7 @@ export default {
       // }, this.interval)
       clearTimeout(this.timer)
       this.timer = setTimeout(() => {
-        this.slider.next() // better-scroll中定义的方法
+        this.slider.next() // better-scroll中定义的方法，用于处理自动轮
       }, this.interval)
     }
   },
@@ -151,13 +151,13 @@ export default {
       text-align: center;
       a {
         display: block;
-        width: 100%;
+        // width: 100%;
         overflow: hidden;
         text-decoration: none;
-      }
-      img {
-        display: block;
-        width: 100%;
+        img {
+          display: block;
+          width: 100%; //这里不限制宽度将会按图片本身的宽度进行渲染
+        }
       }
     }
   }
